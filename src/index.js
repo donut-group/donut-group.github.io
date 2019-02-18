@@ -1,5 +1,5 @@
 import creatureList from './creatures.js';
-
+import localSave from './local-save.js';
 const form = document.getElementById('name-form');
 
 let randomCreature = Math.floor(Math.random() * creatureList.length);
@@ -9,19 +9,21 @@ form.addEventListener('submit', function(event) {
 
     const formData = new FormData(form);
 
+    // const allHats = [
+
+    // ];
     const profile = { 
         name: formData.get('name'),
         creatureId: randomCreature,
         happinessLevel: 5,
         money: 50,
         hat: null
+        
     };
-
+    
+    localSave('profile', profile);
     
 
-    const serialize = JSON.stringify(profile);
-
-    window.localStorage.setItem('profile', serialize);
 
     window.location = '/display/map.html';
    

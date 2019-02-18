@@ -1,6 +1,9 @@
 import cardWin from '../src/card-game.js';
-const json = window.localStorage.getItem('profile');
-const profile = JSON.parse(json);
+import localLoad from '../src/local-storage.js';
+import localSave from '../src/local-save.js';
+
+
+const profile = localLoad('profile');
 
 const yourCard = document.getElementById('your-card');
 const theirCard = document.getElementById('opponent-card');
@@ -45,9 +48,7 @@ playButton.addEventListener('click', function() {
         profile.money -= 10;
     }
 
-    const serialize = JSON.stringify(profile);
-    window.localStorage.setItem('profile', serialize);
-
+    localSave(profile, 'profile');
 
 });
 

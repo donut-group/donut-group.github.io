@@ -1,8 +1,10 @@
+import localLoad from './local-storage.js';
+import localSave from './local-save.js';
+
 const hatDisplay = document.getElementById('hats');
 const message = document.getElementById('message');
 
-const json = window.localStorage.getItem('profile');
-const profile = JSON.parse(json);
+const profile = localLoad('profile');
 
 let hatInventory = [
     {   
@@ -28,9 +30,13 @@ function hatClicked(index) {
     else {
         message.textContent = 'Yay! What a great new hat!';
         profile.money -= hatInventory[index].cost;
+        profile.hat = index;
+        profile.happiness += hatInventory[index].happiness;
+        localSave(profile, 'profile');
     }
 
-    // decrease money
+
+
     // remove hat from store
     // set hat in profile
     //happiness increase
@@ -43,7 +49,7 @@ for(let i = 0; i < hatInventory.length; i++) {
     hatSpan.classList.add('hat-span');
     hatSpan.appendChild(hatImage);
     hatDisplay.appendChild(hatSpan);
-    hatSpan.addEventListener('click', function (event) {
+    hatSpan.addEventListener('click', function(event) {
         hatClicked(i);
-    })
+    });
 }
