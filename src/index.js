@@ -12,8 +12,8 @@ form.addEventListener('submit', function(event) {
     const profile = { 
         name: formData.get('name'),
         creatureId: randomCreature,
-        happinessLevel: 0,
-        money: 0,
+        happinessLevel: 5,
+        money: 50,
         hat: null
     };
 

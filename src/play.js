@@ -1,4 +1,7 @@
 import cardWin from '../src/card-game.js';
+const json = window.localStorage.getItem('profile');
+const profile = JSON.parse(json);
+
 const yourCard = document.getElementById('your-card');
 const theirCard = document.getElementById('opponent-card');
 const playButton = document.getElementById('play-button');
@@ -35,11 +38,15 @@ playButton.addEventListener('click', function() {
 
     if(cardWin(yourCardNumber, theirCardNumber)) {
         gameResultDisplay.textContent = 'You Win!';
+        profile.money += 10;
     }
     else {
         gameResultDisplay.textContent = 'You Lose!';
+        profile.money -= 10;
     }
 
+    const serialize = JSON.stringify(profile);
+    window.localStorage.setItem('profile', serialize);
 
 
 });
