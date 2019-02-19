@@ -19,7 +19,7 @@ if(profile.hat) {
 }
 
 
-function hatClicked(index, span) {
+function hatClicked(index, targetSpan) {
     // check money
     if(hatInventory[index].cost > profile.money) {
         message.textContent = 'You don\'t have enough money to buy this hat. Go back to the game to win more money.';
@@ -31,7 +31,7 @@ function hatClicked(index, span) {
         profile.happiness += hatInventory[index].happiness;
         localSave('profile', profile);
         yourHat.src = hatInventory[profile.hat].src;
-        span.classList.add('hidden');
+        targetSpan.classList.add('hidden');
 
         localSave('bought-hat', index);
 
