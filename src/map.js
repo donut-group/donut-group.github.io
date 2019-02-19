@@ -17,7 +17,7 @@ if(profile.hat === 2) {
     partyImage.classList.remove('hidden');
 }
 
-if(profile.hat) {
+if(!(profile.hat === null)) {
     creatureHat.src = hatInventory[profile.hat].src;
 }
 

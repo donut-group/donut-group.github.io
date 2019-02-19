@@ -19,7 +19,7 @@ if(profile.hat) {
 }
 
 
-function hatClicked(index) {
+function hatClicked(index, span) {
     // check money
     if(hatInventory[index].cost > profile.money) {
         message.textContent = 'You don\'t have enough money to buy this hat. Go back to the game to win more money.';
@@ -31,9 +31,11 @@ function hatClicked(index) {
         profile.happiness += hatInventory[index].happiness;
         localSave('profile', profile);
         yourHat.src = hatInventory[profile.hat].src;
+        span.classList.add('hidden');
+
+        localSave('bought-hat', index);
+
     }
-
-
 
     // remove hat from store
     // set hat in profile
@@ -43,11 +45,16 @@ function hatClicked(index) {
 for(let i = 0; i < hatInventory.length; i++) {
     const hatSpan = document.createElement('span');
     const hatImage = document.createElement('img');
+    hatSpan.id = hatInventory[i].id;
+    if(profile.hat === i) {
+        hatSpan.classList.add('hidden');
+
+    }
     hatImage.src = hatInventory[i].src;
     hatSpan.classList.add('hat-span');
     hatSpan.appendChild(hatImage);
     hatDisplay.appendChild(hatSpan);
-    hatSpan.addEventListener('click', function() {
-        hatClicked(i);
+    hatSpan.addEventListener('click', function(event) {
+        hatClicked(i, event.target);
     });
 }
