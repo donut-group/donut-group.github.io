@@ -1,26 +1,23 @@
 import localLoad from './local-storage.js';
 import localSave from './local-save.js';
+import creatureList from './creatures.js';
 
 const hatDisplay = document.getElementById('hats');
 const message = document.getElementById('message');
+import hatInventory from './hat-inventory.js';
+
+const yourHat = document.getElementById('your-hat');
+const creature = document.getElementById('creature-image');
+
 
 const profile = localLoad('profile');
 
-let hatInventory = [
-    {   
-        id: 'hat1',
-        src: '../assets/fakehat1.png',
-        cost: 60,
-        happiness: 10
-    },
+creature.src = creatureList[profile.creatureId];
 
-    {   
-        id: 'hat2',
-        src: '../assets/fakehat2.png',
-        cost: 10,
-        happiness: 10
-    }
-];
+if(profile.hat) {
+    yourHat.src = hatInventory[profile.hat].src;
+}
+
 
 function hatClicked(index) {
     // check money
@@ -32,7 +29,8 @@ function hatClicked(index) {
         profile.money -= hatInventory[index].cost;
         profile.hat = index;
         profile.happiness += hatInventory[index].happiness;
-        localSave(profile, 'profile');
+        localSave('profile', profile);
+        yourHat.src = hatInventory[profile.hat].src;
     }
 
 
@@ -49,7 +47,7 @@ for(let i = 0; i < hatInventory.length; i++) {
     hatSpan.classList.add('hat-span');
     hatSpan.appendChild(hatImage);
     hatDisplay.appendChild(hatSpan);
-    hatSpan.addEventListener('click', function(event) {
+    hatSpan.addEventListener('click', function() {
         hatClicked(i);
     });
 }

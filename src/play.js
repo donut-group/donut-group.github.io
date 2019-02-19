@@ -48,7 +48,7 @@ playButton.addEventListener('click', function() {
         profile.money -= 10;
     }
 
-    localSave(profile, 'profile');
+    localSave('profile', profile);
 
 });
 
