@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../main.css">
     <title>Card Game</title>
 </head>
 <body>
     <main>
         <section>
+            <div>
+                <p>Shark's Played Cards</p>
+                <span id="opponent-played-cards"></span>
+            </div>
+            <div>
+                <p>Played Cards</p>
+                <section id="played-cards"></section>
+            </div>
+            <div>
+                <p>Your Hand</p>
+                <section id="your-hand"></section>
+            </div>
             <span id="game-result"></span>
-            <p>Your Card</p>
-            <span id="your-card"></span>
-            <p>Shark's Card</p>
-            <span id="opponent-card"></span>
         </section>
-        <button id="play-button">Play</button>
+        <button id="shark-turn" class="hidden">Let Shark Take a Turn</button>
     </main>
     <footer>
         <a href="map.html">Back to Map</a>
