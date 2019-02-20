@@ -1,4 +1,4 @@
-import localLoad from './local-storage.js';
+import localLoad from './local-load.js';
 import localSave from './local-save.js';
 import creatureList from './creatures.js';
 
@@ -37,7 +37,6 @@ function hatClicked(index, targetSpan) {
         localSave('profile', profile);
         yourHatDisplay.src = hatInventory[profile.hat].src;
         targetSpan.classList.add('hidden');
-        localSave('bought-hat', index);
 
         //need to make hats disappear from the store - use same array for bought hats and your hats
 
@@ -53,14 +52,17 @@ function hatClicked(index, targetSpan) {
     // set hat in profile
     //happiness increase
 }
+let yourHats = localLoad('yourHats');
+if(!yourHats){
+    yourHats = [];
+}
 
 for(let i = 0; i < hatInventory.length; i++) {
     const hatSpan = document.createElement('span');
     const hatImage = document.createElement('img');
     hatSpan.id = hatInventory[i].id;
-    if(profile.hat === i) {
+    if(yourHats.includes(i)) {
         hatSpan.classList.add('hidden');
-
     }
     hatImage.src = hatInventory[i].src;
     hatSpan.classList.add('hat-span');

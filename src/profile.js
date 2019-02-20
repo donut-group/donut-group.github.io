@@ -7,16 +7,11 @@ function creatureProfile() {
     const creatureHappy = document.getElementById('creature-happy');
     const creatureMoney = document.getElementById('creature-money');
     const creatureHat = document.getElementById('your-hat');
-    const partyImage = document.getElementById('party-image');
     const json = window.localStorage.getItem('profile');
     if(!json) {
         window.location = '../index.html';
     }
     const profile = JSON.parse(json);
-
-    if(profile.hat === 2) {
-        partyImage.classList.remove('hidden');
-    }
 
     if(!(profile.hat === null)) {
         creatureHat.src = hatInventory[profile.hat].src;
