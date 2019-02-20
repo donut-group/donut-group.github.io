@@ -24,7 +24,9 @@ let theirCard = null;
 
 function cardClicked(yourCard) {
     const playedCardSpan = document.createElement('span');
-    playedCardSpan.textContent = yourCard.number + yourCard.suit;
+    playedCardSpan.textContent = yourCard.number;
+    playedCardSpan.classList.add('card');
+    playedCardSpan.classList.add(yourCard.suit);
     yourPlayedCardsDisplay.appendChild(playedCardSpan);
     lastPlayedCard = yourCard;
     if(cardWin(yourCard, theirCard)) {
@@ -77,7 +79,9 @@ function redeal() {
     shuffle(deck);
     theirCard = deck.pop();
     const theirPlayedCardSpan = document.createElement('span');
-    theirPlayedCardSpan.textContent = theirCard.number + theirCard.suit;
+    theirPlayedCardSpan.textContent = theirCard.number;
+    theirPlayedCardSpan.classList.add('card');
+    theirPlayedCardSpan.classList.add(theirCard.suit);
     theirPlayedCardsDisplay.appendChild(theirPlayedCardSpan);
     lastPlayedCard = null;
     for(let i = 0; i < 3; i++) {
@@ -95,7 +99,9 @@ function redeal() {
 
 function createCard(yourCard, container) {
     const yourCardDisplay = document.createElement('span');
-    yourCardDisplay.textContent = yourCard.number + yourCard.suit;
+    yourCardDisplay.textContent = yourCard.number;
+    yourCardDisplay.classList.add('card');
+    yourCardDisplay.classList.add(yourCard.suit);
     container.appendChild(yourCardDisplay);
     return yourCardDisplay;
 }
@@ -105,7 +111,9 @@ sharkTurnButton.addEventListener('click', function(){
     sharkTurnButton.classList.add('hidden');
     theirCard = deck.pop();
     const theirPlayedCardSpan = document.createElement('span');
-    theirPlayedCardSpan.textContent = theirCard.number + theirCard.suit;
+    theirPlayedCardSpan.textContent = theirCard.number;
+    theirPlayedCardSpan.classList.add('card');
+    theirPlayedCardSpan.classList.add(theirCard.suit);
     theirPlayedCardsDisplay.appendChild(theirPlayedCardSpan);
     yourHandDisplay.classList.remove('unclickable');
     deckDraw.classList.remove('unclickable');

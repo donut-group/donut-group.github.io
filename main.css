@@ -1,5 +1,7 @@
-#egg {
-    width: 200px;
+
+body{
+    margin: 0px;
+    background-image: './assets/background.png';
 }
 
 .hidden{
@@ -14,3 +16,19 @@
 #hats img {
     width: 200px;
 }
+
+button {
+
+}
+
+#creature-hud p {
+    display: inline;
+
+}
+
+#creature-hud {
+    background-color: aqua;
+    height: 30\px;
+    text-align: center;
+}
+

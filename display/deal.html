@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../main.css">
     <title>Deal</title>
 </head>
 <body> 
     <header>
-        <h1>Name of Card Game</h1>
+        <h1>Red Card, Blue Card</h1>
     </header>
 
     <main>
         <section>
-            <p>
-                brief description of the card game
-                red biggest number
-                blue smalles number
+            <p id="one">
+                Let's play a game! Each time you win, you'll get $10. If I win, you pay me $5, and you lose happiness. 
+            </p>
+            <p id="two" class="hidden">
+                I'll play first. You'll want to play a red card that's higher than mine, or a blue card that's lower than mine. If none of your cards feel good, you can take your chances and play a random card from the deck.
+            </p>
+            <p id="three" class="hidden">
+                Then it's my turn. I will have to play a red card that's higher than your last played card, or a blue card that's lower. If I don't, then I lose. 
             </p>
         </section>
-
-        <a href="./play.html">Deal Me!</a>
+        <button id="button-one">Next</button>
+        <button id="button-two" class="hidden">Next</button>
+        <a href="./play.html" class="hidden" id="deal-link">Deal Me!</a>
+        <a href="./play.html" id="skip-tutorial">Skip Tutorial</a>
     </main>
 <script type="module" src="../src/deal.js"></script>
 </body>
