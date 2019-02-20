@@ -12,10 +12,15 @@ const creature = document.getElementById('creature-image');
 
 const profile = localLoad('profile');
 
-creature.src = creatureList[profile.creatureId];
+if(profile.happinessLevel > 4) {
+    creature.src = creatureList[profile.creatureId].happyImage;
+}
+else {
+    creature.src = creatureList[profile.creatureId].sadImage;
+}
 
 if(profile.hat) {
-    yourHat.src = hatInventory[profile.hat].src;
+    yourHatDisplay.src = hatInventory[profile.hat].src;
 }
 
 
@@ -36,12 +41,13 @@ function hatClicked(index, targetSpan) {
 
         //need to make hats disappear from the store - use same array for bought hats and your hats
 
-        // let yourHats = localLoad('yourHats');
-        // if(!yourHats){
-        //     yourHats = [];
-        // } 
-        // yourHats.push[index];
-        // localSave('yourHats', yourHats);
+        let yourHats = localLoad('yourHats');
+        console.log(yourHats);
+        if(!yourHats){
+            yourHats = [];
+        } 
+        yourHats.push(index);
+        localSave('yourHats', yourHats);
     }
 
     // remove hat from store
