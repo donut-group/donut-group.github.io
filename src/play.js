@@ -1,5 +1,5 @@
 import cardWin from '../src/card-game.js';
-import localLoad from '../src/local-storage.js';
+import localLoad from '../src/local-load.js';
 import localSave from '../src/local-save.js';
 import shuffle from '../src/shuffle.js';
 import creatureProfile from '../src/profile.js';
@@ -37,7 +37,7 @@ function cardClicked(yourCard) {
     else {
         gameResultDisplay.textContent = 'You lose both pride and money';
         profile.money -= 5;
-        profile.happinessLevel -= 1;
+        profile.happiness -= 1;
         localSave('profile', profile);
         redealButton.classList.remove('hidden');
         creatureProfile();

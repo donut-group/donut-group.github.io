@@ -5,6 +5,7 @@ import creatureList from './creatures.js';
 const hatDisplay = document.getElementById('hats');
 const message = document.getElementById('message');
 import hatInventory from './hat-inventory.js';
+import creatureProfile from './profile.js';
 
 const yourHatDisplay = document.getElementById('your-hat');
 const creature = document.getElementById('creature-image');
@@ -12,7 +13,7 @@ const creature = document.getElementById('creature-image');
 
 const profile = localLoad('profile');
 
-if(profile.happinessLevel > 4) {
+if(profile.happiness > 4) {
     creature.src = creatureList[profile.creatureId].happyImage;
 }
 else {
@@ -46,6 +47,7 @@ function hatClicked(index, targetSpan) {
         } 
         yourHats.push(index);
         localSave('yourHats', yourHats);
+        creatureProfile();
     }
 
     // remove hat from store
