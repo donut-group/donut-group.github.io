@@ -2,6 +2,9 @@ import cardWin from '../src/card-game.js';
 import localLoad from '../src/local-storage.js';
 import localSave from '../src/local-save.js';
 import shuffle from '../src/shuffle.js';
+import creatureProfile from '../src/profile.js';
+
+creatureProfile();
 
 
 const profile = localLoad('profile');
@@ -19,6 +22,28 @@ const deck = [];
 let shuffled = shuffle(deck);
 let theirCard = shuffled.pop();
 let lastPlayedCard = null;
+
+function cardClicked(yourCard) {
+    const playedCardSpan = document.createElement('span');
+    playedCardSpan.textContent = yourCard.number + yourCard.suit;
+    yourPlayedCardsDisplay.appendChild(playedCardSpan);
+    lastPlayedCard = yourCard;
+    if(cardWin(yourCard, theirCard)) {
+        gameResultDisplay.textContent = 'You stay in, for now';
+        sharkTurnButton.classList.remove('hidden');
+        yourHandDisplay.classList.add('unclickable');
+        //redealButton.classList.add('hidden');
+        deckDraw.classList.add('unclickable');
+    }
+    else {
+        gameResultDisplay.textContent = 'You lose both pride and money';
+        profile.money -= 5;
+        localSave('profile', profile);
+        redealButton.classList.remove('hidden');
+        creatureProfile();
+        yourHandDisplay.classList.add('unclickable');
+    }
+}
 
 function redeal() {
     const deck = [];
@@ -63,24 +88,10 @@ function redeal() {
             event.target.classList.add('hidden');
         });
     }
+    yourHandDisplay.classList.remove('unclickable');
 }
 
-function cardClicked(yourCard) {
-    const playedCardSpan = document.createElement('span');
-    playedCardSpan.textContent = yourCard.number + yourCard.suit;
-    yourPlayedCardsDisplay.appendChild(playedCardSpan);
-    lastPlayedCard = yourCard;
-    if(cardWin(yourCard, theirCard)) {
-        gameResultDisplay.textContent = 'You stay in, for now';
-        sharkTurnButton.classList.remove('hidden');
-        yourHandDisplay.classList.add('unclickable')
-        deckDraw.classList.add('unclickable');
-    }
-    else {
-        gameResultDisplay.textContent = 'You lose both pride and money';
-        redealButton.classList.remove('hidden');
-    }
-}
+
 
 function createCard(yourCard, container) {
     const yourCardDisplay = document.createElement('span');
@@ -100,7 +111,12 @@ sharkTurnButton.addEventListener('click', function(){
     deckDraw.classList.remove('unclickable');
     if(cardWin(lastPlayedCard, theirCard)){
         gameResultDisplay.textContent = 'The shark has lost to you';
+        
+        profile.money += 10;
+        localSave('profile', profile);
         redealButton.classList.remove('hidden');
+        creatureProfile();
+        yourHandDisplay.classList.add('unclickable');
     } else {
         gameResultDisplay.textContent = 'The shark stays in another round.';
     }

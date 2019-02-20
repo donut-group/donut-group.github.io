@@ -1,22 +1,34 @@
 let hatInventory = [
     {   
-        id: 'hat1',
-        src: '../assets/fakehat1.png',
-        cost: 60,
-        happiness: 10
+        id: 'beanie',
+        src: '../assets/hat-beanie.png',
+        cost: 30,
+        happiness: 1
     },
     
     {   
-        id: 'hat2',
-        src: '../assets/fakehat2.png',
-        cost: 10,
-        happiness: 10
+        id: 'bunny',
+        src: '../assets/hat-bunny-ears.png',
+        cost: 40,
+        happiness: 2
+    },
+    {   
+        id: 'madHatter',
+        src: '../assets/mad-hatter-hat.png',
+        cost: 50,
+        happiness: -1
     },
     {   
         id: 'partyHat',
-        src: '../assets/party-hat.png',
-        cost: 10,
-        happiness: 10
+        src: '../assets/hat-party.png',
+        cost: 60,
+        happiness: 2
+    },
+    {   
+        id: 'bowler',
+        src: '../assets/hat-bowler.png',
+        cost: 100,
+        happiness: 2
     }
 ];
 

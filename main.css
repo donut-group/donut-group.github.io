@@ -8,4 +8,9 @@
 
 .unclickable{
     pointer-events: none;
+    background-color: grey;
+}
+
+#hats img {
+    width: 200px;
 }
