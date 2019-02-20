@@ -6,7 +6,7 @@ const hatDisplay = document.getElementById('hats');
 const message = document.getElementById('message');
 import hatInventory from './hat-inventory.js';
 
-const yourHat = document.getElementById('your-hat');
+const yourHatDisplay = document.getElementById('your-hat');
 const creature = document.getElementById('creature-image');
 
 
@@ -30,11 +30,18 @@ function hatClicked(index, targetSpan) {
         profile.hat = index;
         profile.happiness += hatInventory[index].happiness;
         localSave('profile', profile);
-        yourHat.src = hatInventory[profile.hat].src;
+        yourHatDisplay.src = hatInventory[profile.hat].src;
         targetSpan.classList.add('hidden');
-
         localSave('bought-hat', index);
 
+        //need to make hats disappear from the store - use same array for bought hats and your hats
+
+        // let yourHats = localLoad('yourHats');
+        // if(!yourHats){
+        //     yourHats = [];
+        // } 
+        // yourHats.push[index];
+        // localSave('yourHats', yourHats);
     }
 
     // remove hat from store

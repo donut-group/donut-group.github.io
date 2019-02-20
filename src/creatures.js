@@ -7,10 +7,14 @@ const creatureList = [
         happyImage: '../assets/panda-happy.png',
         sadImage: '../assets/panda-sad.png'
     },
-    
-    '../assets/character-1.png',
-    '../assets/character-2.png',
-    '../assets/character-3.png',
+    {
+        happyImage: '../assets/sasquatch-happy.png',
+        sadImage: '../assets/sasquatch-sad.png'
+    },
+    {
+        happyImage: '../assets/sunny-happy.png',
+        sadImage: '../assets/sunny-sad.png'
+    },
 ];
 
 export default creatureList;

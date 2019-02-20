@@ -38,6 +38,7 @@ function cardClicked(yourCard) {
     else {
         gameResultDisplay.textContent = 'You lose both pride and money';
         profile.money -= 5;
+        profile.happinessLevel -= 1;
         localSave('profile', profile);
         redealButton.classList.remove('hidden');
         creatureProfile();
