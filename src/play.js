@@ -19,9 +19,8 @@ const redealButton = document.getElementById('redeal');
 
 const deck = [];
 
-let shuffled = shuffle(deck);
-let theirCard = shuffled.pop();
 let lastPlayedCard = null;
+let theirCard = null;
 
 function cardClicked(yourCard) {
     const playedCardSpan = document.createElement('span');
@@ -47,7 +46,7 @@ function cardClicked(yourCard) {
 }
 
 function redeal() {
-    const deck = [];
+    // const deck = [];
     while(yourHandDisplay.firstChild)
     {
         yourHandDisplay.removeChild(yourHandDisplay.firstChild);
@@ -75,14 +74,14 @@ function redeal() {
         deck.push(redCard);
         deck.push(blueCard);
     }
-    shuffled = shuffle(deck);
-    theirCard = shuffled.pop();
+    shuffle(deck);
+    theirCard = deck.pop();
     const theirPlayedCardSpan = document.createElement('span');
     theirPlayedCardSpan.textContent = theirCard.number + theirCard.suit;
     theirPlayedCardsDisplay.appendChild(theirPlayedCardSpan);
     lastPlayedCard = null;
     for(let i = 0; i < 3; i++) {
-        let yourCard = shuffled.pop();
+        let yourCard = deck.pop();
         const yourCardDisplay = createCard(yourCard, yourHandDisplay);
         yourCardDisplay.addEventListener('click', function(event) {
             cardClicked(yourCard);
@@ -104,7 +103,7 @@ function createCard(yourCard, container) {
 
 sharkTurnButton.addEventListener('click', function(){   
     sharkTurnButton.classList.add('hidden');
-    theirCard = shuffled.pop();
+    theirCard = deck.pop();
     const theirPlayedCardSpan = document.createElement('span');
     theirPlayedCardSpan.textContent = theirCard.number + theirCard.suit;
     theirPlayedCardsDisplay.appendChild(theirPlayedCardSpan);
@@ -118,13 +117,14 @@ sharkTurnButton.addEventListener('click', function(){
         redealButton.classList.remove('hidden');
         creatureProfile();
         yourHandDisplay.classList.add('unclickable');
+        deckDraw.classList.add('unclickable');
     } else {
         gameResultDisplay.textContent = 'The shark stays in another round.';
     }
 });
 
 deckDraw.addEventListener('click', function() {
-    const yourCard = shuffled.pop();
+    const yourCard = deck.pop();
     // createCard(yourCard, yourPlayedCardsDisplay);
     cardClicked(yourCard);
 });
