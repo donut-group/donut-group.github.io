@@ -42,7 +42,6 @@ function hatClicked(index, targetSpan) {
         //need to make hats disappear from the store - use same array for bought hats and your hats
 
         let yourHats = localLoad('yourHats');
-        console.log(yourHats);
         if(!yourHats){
             yourHats = [];
         } 
