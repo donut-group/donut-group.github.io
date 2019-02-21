@@ -26,13 +26,26 @@ html {
 
 #shark-row {
     display:flex;
-    flex-direction: right;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
 }
+
+/* #shark-card-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-around;
+    width: 66vw;
+} */
+
+
 
 #shark-image{
     width: 15vw;
-    height: 15vw;
+
+    
+    
 }
 
 #center-row {
@@ -43,12 +56,34 @@ html {
 
 #game-result{
     width: 30vw;
+    height: 30vh;
 }
 
 #your-row{
     display: flex;
     flex-direction: row;
-    justify-content: space-around
+    justify-content: space-around;
+    width: 100vw;
+}
+
+#yourPlayedDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 80px;
+}
+
+#yourHandDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 34vw;
+    text-align: center;
+}
+
+#deck-draw{
+    width: 33vw;
 }
 
 #creature-with-hat {
@@ -56,6 +91,7 @@ html {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    width: 33vw;
 }
 
 #your-hat{
@@ -65,6 +101,7 @@ html {
 }
 
 #creature-image {
+    display
     z-index: 1;
     height: 20vh;
 }
