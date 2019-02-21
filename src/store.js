@@ -72,7 +72,7 @@ if(!yourHats){
 for(let i = 0; i < hatInventory.length; i++) {
     const hatSpan = document.createElement('span');
     const hatImage = document.createElement('img');
-    hatImage.classList.add('sale-hats')
+    hatImage.classList.add('sale-hats');
     hatSpan.id = hatInventory[i].id;
     if(yourHats.includes(i)) {
         hatSpan.classList.add('hidden');

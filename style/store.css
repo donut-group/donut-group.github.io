@@ -7,3 +7,65 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+#screen{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#row-one {
+    height: 20vh;
+}
+#row-two {
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+#row-three {
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#hat-shelf {
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    left: 11vw;
+    top: 8vh;
+}
+
+
+#store-sign {
+    width: 30vw;
+    position: relative;
+    left: 35vw;
+    top: 2vh;
+}
+
+#message {
+    width: 18vw;
+    position: relative;
+    top: 17vh;
+    left: 5vw;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#your-hat{
+    width: 9vw;
+    position: relative;
+    top: 7vh;
+    left: 2.5vw;
+}
+
+#creature-with-hat{
+    position: absolute;
+    bottom: 2vh;
+    right: 20vh;
+}
+    
