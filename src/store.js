@@ -23,6 +23,7 @@ else {
 
 if(profile.hat) {
     yourHatDisplay.src = hatInventory[profile.hat].src;
+    yourHatDisplay.alt = hatInventory[profile.hat].alt;
 }
 
 function hatEntered(index) {
@@ -76,6 +77,7 @@ for(let i = 0; i < hatInventory.length; i++) {
         hatSpan.classList.add('hidden');
     }
     hatImage.src = hatInventory[i].src;
+    hatImage.alt = hatInventory[i].alt;
     hatSpan.classList.add('hat-span');
     hatSpan.appendChild(hatImage);
     hatDisplay.appendChild(hatSpan);

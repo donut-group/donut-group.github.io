@@ -28,6 +28,7 @@ function createHatRack() {
         hatSpan.id = 'hat' + i;
         if(yourHats.includes(i) && !(profile.hat === i)) {
             const hatImage = document.createElement('img');
+            hatImage.alt = hatInventory[i].alt;
             hatImage.src = hatInventory[i].src;
             hatSpan.appendChild(hatImage);
             hatSpan.addEventListener('click', 

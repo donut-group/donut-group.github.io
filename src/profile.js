@@ -15,12 +15,16 @@ function creatureProfile() {
 
     if(!(profile.hat === null)) {
         creatureHat.src = hatInventory[profile.hat].src;
+        creatureHat.alt = hatInventory[profile.hat].alt;
     }
     if(profile.happiness > 4) {
         creatureImage.src = creatureList[profile.creatureId].happyImage;
+        creatureImage.alt = 'your happy creature';
     }
     else {
         creatureImage.src = creatureList[profile.creatureId].sadImage;
+        creatureImage.alt = 'your sad creature';
+
     }
     creatureName.textContent = profile.name;
     creatureHappy.textContent = profile.happiness;
