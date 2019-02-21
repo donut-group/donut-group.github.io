@@ -24,6 +24,14 @@ if(profile.hat) {
     yourHatDisplay.src = hatInventory[profile.hat].src;
 }
 
+function hatEntered(index) {
+    const yourHats = localLoad('yourHats');
+    if(!yourHats || !yourHats.includes(index)) {
+        message.innerHTML = hatInventory[index].description + 
+        '<br> Cost: ' + hatInventory[index].cost;
+    }
+}
+
 
 function hatClicked(index, targetSpan) {
     // check money
@@ -37,7 +45,7 @@ function hatClicked(index, targetSpan) {
         profile.happiness += hatInventory[index].happiness;
         localSave('profile', profile);
         yourHatDisplay.src = hatInventory[profile.hat].src;
-        targetSpan.classList.add('hidden');
+        targetSpan.classList.add('invisible');
 
         //need to make hats disappear from the store - use same array for bought hats and your hats
 
@@ -72,5 +80,8 @@ for(let i = 0; i < hatInventory.length; i++) {
     hatDisplay.appendChild(hatSpan);
     hatSpan.addEventListener('click', function(event) {
         hatClicked(i, event.target);
+    });
+    hatSpan.addEventListener('mouseover', function() {
+        hatEntered(i);
     });
 }
