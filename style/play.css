@@ -21,11 +21,32 @@ html {
     background-color: pink;
 }
 
-/* #screen {
+#shark-row {
+    display:flex;
+    flex-direction: right;
+    justify-content: space-around;
+}
+
+#shark-image{
+    width: 15vw;
+    height: 15vw;
+}
+
+#center-row {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#game-result{
+    width: 30vw;
+}
+
+#your-row{
     display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+    flex-direction: row;
+    justify-content: space-around
+}
 
 #creature-with-hat {
     display: flex;
@@ -34,23 +55,33 @@ html {
     align-items: center;
 }
 
-#hat {
+#your-hat{
     z-index: 2;
-    position: relative;
     margin-bottom: -9.5vh;
-}
-
-#creature {
-    z-index: 1;
-    position: relative;
-    
+    height: 20vh;
 }
 
 #creature-image {
+    z-index: 1;
+    height: 20vh;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#footer-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* #creature-image {
     width: 25vh;
 }
 
 #your-hat {
     width: 15vh;
-}
+} */
 

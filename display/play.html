@@ -11,46 +11,48 @@
 </head>
 <body>
     <main>
-        <div id="screen">
-        <section id="creature-hud">
-            <p>Name: <span id="creature-name"></span></p>
-            <p>Happiness: <span id="creature-happy"></span></p>
-            <p>Money: <span id="creature-money"></span></p>
-        </section>
-        <section>
-            <div>
-                <p>Shark's Played Cards</p>
-                <span id="opponent-played-cards"></span>
-            </div>
-            <div>
-                <p>Played Cards</p>
-                <section id="played-cards"></section>
-            </div>
-            <div>
-                <p>Your Hand</p>
-                <section id="your-hand"></section>
-            </div>
-            <div>
-                <span id="deck-draw">Draw From Deck</span>
-            </div>
-            <span id="game-result"></span>
-        </section>            
-        <section>
-                <div id="creature-with-hat">
-                    <div id="hat">
-                        <img src="" id="your-hat">
-                    </div>
-                    <div id="creature">
-                        <img src="" id="creature-image">
-                    </div>
-                </div>
+            <section id="creature-hud">
+                    <p>Name: <span id="creature-name"></span></p>
+                    <p>Happiness: <span id="creature-happy"></span></p>
+                    <p>Money: <span id="creature-money"></span></p>
                 </section>
-        <button id="shark-turn" class="hidden">Let Shark Take a Turn</button>
-        <button id="redeal" class="hidden">Start a New Game</button>
+        <div id="screen">
+        <section>
+            <div id="shark-row">
+                <img src="../assets/shark.png" id="shark-image"> 
+                <div id="sharkCardDisplay"> <p>Shark's Played Cards</p>
+                <span id="opponent-played-cards"></span>
+                </div>
+            </div>
+            <div id="center-row">
+                <span id="game-result"></span>
+                <div id="yourPlayedDisplay">
+                <section id="played-cards"></section>
+                <p>Played Cards</p>
+                </div>
+            </div>
+            <div id="your-row">
+                <div id="yourHandDisplay">
+                <section id="your-hand"></section>
+                <p>Your Hand</p>
+                </div>
+                <div id="creature-with-hat">
+                    <img src="" id="your-hat">
+                    <img src="" id="creature-image">
+                </div>
+            </div>
+            <div id="buttons">
+            <span id="deck-draw">Draw From Deck</span>
+            
+            <button id="shark-turn" class="hidden">Let Shark Take a Turn</button>
+            <button id="redeal" class="hidden">Start a New Game</button>
+            </div>
         </div>
     </main>
     <footer>
-        <a href="map.html">Back to Map</a>
+        <div id="footer-link">
+        <a href="map.html" >Back to Map</a>
+        </div>
     </footer>
     <script type="module" src="../src/play.js"></script>
 </body>
