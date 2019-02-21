@@ -1,7 +1,6 @@
 
 body{
     margin: 0px;
-    background-image: './assets/background.png';
 }
 
 .hidden{
@@ -13,8 +12,8 @@ body{
     background-color: grey;
 }
 
-#hats img {
-    width: 200px;
+h1 {
+    font-family: 'Sacramento', cursive;
 }
 
 button {
@@ -23,7 +22,6 @@ button {
 
 #creature-hud p {
     display: inline;
-
 }
 
 #creature-hud {

@@ -3,8 +3,10 @@ import localSave from './local-save.js';
 const form = document.getElementById('name-form');
 const dream = document.getElementById('dream');
 
+window.localStorage.clear();
+
+
 let randomCreature = Math.floor(Math.random() * creatureList.length);
-console.log(randomCreature);
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
