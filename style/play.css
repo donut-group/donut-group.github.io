@@ -1,5 +1,5 @@
 html {
-    background: url(/assets/background.png);
+    background: url(/assets/game-background.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8,12 +8,22 @@ html {
     background-attachment: fixed;
 }
 
+#screen {
+    margin-right: 7vw;
+    margin-left: 7vw;
+}
 
 .card {
     border: 2px solid black;
     font-size: 400%;
     border-radius: 10px;
     box-shadow: 5px 5px;
+    font-family: 'Major Mono Display', monospace;
+    padding: 5px;
+}
+
+.yellow {
+    background-color: rgb(221, 230, 100);
 }
 
 .blue {
@@ -25,53 +35,83 @@ html {
 }
 
 #shark-row {
+    font-family: 'Fredericka the Great', cursive;
     display:flex;
-    flex-direction: row;
+    flex-direction: right;
     justify-content: space-around;
-    align-items: flex-start;
+
 }
 
-/* #shark-card-display{
-    display: flex;
+#shark-card-display{
+    display:flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: space-around;
-    width: 66vw;
-} */
-
+    height: 20vh;
+    margin-bottom:2vh;
+}
 
 
 #shark-image{
-    width: 15vw;
+    width: 20vw;
+    height: 15vw;
+    margin-top: 5vh;
 
-    
-    
 }
 
 #center-row {
+    font-family: 'Fredericka the Great', cursive;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    text-align: center;
+}
+
+#game-result{
+    margin-top: 
+
 }
 
 #game-result{
     width: 30vw;
-    height: 30vh;
+    height: 10vh;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 30px;
+    margin-bottom: 100px;
 }
 
 #your-row{
+    font-family: 'Fredericka the Great', cursive;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100vw;
 }
 
+#your-row .yellow {
+    margin-left: 15vw;
+    width: 10vw;
+    height: 13vw;
+    margin-bottom:
+    
+}
+
 #yourPlayedDisplay{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 80px;
+    justify-content: center;
+    height: 20vh;
+    width: 17vw;
+    margin-top: -5vh;
 }
+#yourPlayedDisplay span{
+    margin-right: 500px
+}
+
+#yourPlayedDisplay p{
+    position: absolute;
+    margin-top: 60px;
+}
+
 
 #yourHandDisplay{
     display: flex;
@@ -80,18 +120,23 @@ html {
     align-items: center;
     width: 34vw;
     text-align: center;
+    margin-left: 8vw;
 }
 
 #deck-draw{
     width: 33vw;
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+    margin-left: 5vw;
 }
 
 #creature-with-hat {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     width: 33vw;
+    margin-right:25vw;
 }
 
 #your-hat{
@@ -101,7 +146,7 @@ html {
 }
 
 #creature-image {
-    display
+
     z-index: 1;
     height: 20vh;
 }

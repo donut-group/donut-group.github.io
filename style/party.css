@@ -1,0 +1,23 @@
+html {
+    background: url(/assets/party-background-no-pinata.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    
+}
+
+#creature-image {
+    background-color:white;
+}
+
+#your-hat{
+    background-color: white;
+}
+
