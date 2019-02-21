@@ -9,7 +9,7 @@ body{
 
 .unclickable{
     pointer-events: none;
-    background-color: grey;
+    filter: blur(2px) grayscale(90%);
 }
 
 h1 {

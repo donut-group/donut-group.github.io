@@ -10,15 +10,18 @@ html {
 
 
 .card {
-
+    border: 2px solid black;
+    font-size: 400%;
+    border-radius: 10px;
+    box-shadow: 5px 5px;
 }
 
 .blue {
-    background-color: lightblue;
+    background-color: rgb(100, 197, 230);
 }
 
 .red {
-    background-color: pink;
+    background-color: rgb(247, 130, 149);
 }
 
 #shark-row {
