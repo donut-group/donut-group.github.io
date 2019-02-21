@@ -76,14 +76,6 @@ html {
     width: 15vw;
 }
 
-#creature-with-hat {
-    position: relative;
-    top: vh;
-    width:
-
-
-}
-
 #play:hover{
     content: url('../assets/play-on.png');
 }
@@ -97,26 +89,24 @@ html {
     content: url('../assets/party-on.png');
 }
 
-#hat {
-    z-index: 2;
-    position: relative;
-    top:5vh
-}
-
-#creature {
-    z-index: 1;
-    position:relative;
-    bottom: 4vh;
-}
-
 #creature-image {
     width: 16vw;
+    z-index: 1;
 }
 
 #your-hat {
     width: 11vw;
     position: relative;
     left: 2.5vw;
-    bottom: 2vh;
+    top: 9vh;
+    z-index: 2;
 }
+
+#creature-with-hat {
+    position: absolute;
+    bottom: 30vh;
+    left: 40vw;
+
+}
+
 

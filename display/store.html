@@ -9,20 +9,30 @@
     <link rel="stylesheet" type="text/css" href="../style/store.css">
     <title>Store</title>
 </head>
-<body>
+<body scroll="no" style="overflow: hidden">
     <section id="creature-hud">
         <p>Name: <span id="creature-name"></span></p>
         <p><img src="/assets/heart.png" alt="happiness" id="heart-pic">: <span id="creature-happy"></span></p>
         <p><img src="/assets/money.png" alt="money" id="money-pic">: $<span id="creature-money"></span></p>
     </section>
-    <header<><h1>Hat Store</h1></header>
-    <div id="screen">
     <main>
-        <div id="hat-shelf">
-        <section id="hats"></section>
+<div id="screen">
+
+    <div id="row-one">
+        <img src="../assets/hat-banner.png" id="store-sign" alt="Hat Store">
+    </div>
+        <div id="row-two">
+            <div id="hat-shelf">
+                <section id="hats"></section>
+            </div>
         </div>
-        <section id="message"></section>
-        <section>
+
+        <div id="row-three">
+            <div id="message-container">
+            <section id="message"></section>
+            </div>
+            <div id="creature">
+            <section>
             <div id="creature-with-hat">
                 <div id="hat">
                     <img src="" id="your-hat">
@@ -31,6 +41,9 @@
                      <img src="" id="creature-image" width="200px" alt="your creature">
                 </div>
             </div>
+            </div>
+        </div>
+    </div>
         </section>
     </main>
     <footer>
