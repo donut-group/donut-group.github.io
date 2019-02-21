@@ -17,7 +17,7 @@ const gameResultDisplay = document.getElementById('game-result');
 const deckDraw = document.getElementById('deck-draw');
 const redealButton = document.getElementById('redeal');
 
-const deck = [];
+let deck = [];
 
 let lastPlayedCard = null;
 let theirCard = null;
@@ -29,12 +29,12 @@ function cardClicked(yourCard) {
     playedCardSpan.classList.add(yourCard.suit);
     yourPlayedCardsDisplay.appendChild(playedCardSpan);
     lastPlayedCard = yourCard;
+    deckDraw.classList.add('unclickable');
+    yourHandDisplay.classList.add('unclickable');
+
     if(cardWin(yourCard, theirCard)) {
         gameResultDisplay.textContent = 'You stay in, for now';
         sharkTurnButton.classList.remove('hidden');
-        yourHandDisplay.classList.add('unclickable');
-        //redealButton.classList.add('hidden');
-        deckDraw.classList.add('unclickable');
     }
     else {
         gameResultDisplay.textContent = 'You lose both pride and money';
@@ -43,12 +43,11 @@ function cardClicked(yourCard) {
         localSave('profile', profile);
         redealButton.classList.remove('hidden');
         creatureProfile();
-        yourHandDisplay.classList.add('unclickable');
     }
 }
 
 function redeal() {
-    // const deck = [];
+    deck = [];
     while(yourHandDisplay.firstChild)
     {
         yourHandDisplay.removeChild(yourHandDisplay.firstChild);
@@ -93,6 +92,7 @@ function redeal() {
         });
     }
     yourHandDisplay.classList.remove('unclickable');
+    deckDraw.classList.remove('unclickable');
 }
 
 
