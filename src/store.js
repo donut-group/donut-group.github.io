@@ -12,6 +12,7 @@ const creature = document.getElementById('creature-image');
 
 
 const profile = localLoad('profile');
+creatureProfile();
 
 if(profile.happiness > 4) {
     creature.src = creatureList[profile.creatureId].happyImage;
@@ -22,6 +23,7 @@ else {
 
 if(profile.hat) {
     yourHatDisplay.src = hatInventory[profile.hat].src;
+    yourHatDisplay.alt = hatInventory[profile.hat].alt;
 }
 
 function hatEntered(index) {
@@ -70,11 +72,13 @@ if(!yourHats){
 for(let i = 0; i < hatInventory.length; i++) {
     const hatSpan = document.createElement('span');
     const hatImage = document.createElement('img');
+    hatImage.classList.add('sale-hats')
     hatSpan.id = hatInventory[i].id;
     if(yourHats.includes(i)) {
         hatSpan.classList.add('hidden');
     }
     hatImage.src = hatInventory[i].src;
+    hatImage.alt = hatInventory[i].alt;
     hatSpan.classList.add('hat-span');
     hatSpan.appendChild(hatImage);
     hatDisplay.appendChild(hatSpan);

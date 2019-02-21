@@ -10,14 +10,27 @@
     <title>Store</title>
 </head>
 <body>
+    <section id="creature-hud">
+        <p>Name: <span id="creature-name"></span></p>
+        <p><img src="/assets/heart.png" alt="happiness" id="heart-pic">: <span id="creature-happy"></span></p>
+        <p><img src="/assets/money.png" alt="money" id="money-pic">: $<span id="creature-money"></span></p>
+    </section>
     <header<><h1>Hat Store</h1></header>
     <div id="screen">
     <main>
+        <div id="hat-shelf">
         <section id="hats"></section>
+        </div>
         <section id="message"></section>
         <section>
-            <img src="" id="creature-image" width="200px">
-            <img src="" id="your-hat">
+            <div id="creature-with-hat">
+                <div id="hat">
+                    <img src="" id="your-hat">
+                </div>
+                 <div id="creature">
+                     <img src="" id="creature-image" width="200px" alt="your creature">
+                </div>
+            </div>
         </section>
     </main>
     <footer>

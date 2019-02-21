@@ -1,13 +1,17 @@
 
-body{
+body {
     margin: 0px;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.unclickable{
+.invisible {
+    visibility: hidden;
+}
+
+.unclickable {
     pointer-events: none;
     filter: blur(2px) grayscale(90%);
 }
@@ -45,6 +49,7 @@ button {
     height: 3vh;
     position: relative;
     top: .5vh;
+
 }
 
 
