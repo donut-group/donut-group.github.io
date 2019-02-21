@@ -12,6 +12,7 @@ const creature = document.getElementById('creature-image');
 
 
 const profile = localLoad('profile');
+creatureProfile();
 
 if(profile.happiness > 4) {
     creature.src = creatureList[profile.creatureId].happyImage;
