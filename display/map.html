@@ -12,13 +12,30 @@
 </head>
 <body>
     <header><h1 class="hidden">DreamWorld Map</h1></header>
+    <section id="creature-hud">
+        <p>Name: <span id="creature-name"></span></p>
+        <p><img src="/assets/heart.png" alt="happiness" id="heart-pic">: <span id="creature-happy"></span></p>
+        <p><img src="/assets/money.png" alt="money" id="money-pic">: $<span id="creature-money"></span></p>
+    </section>
     <main>
-        <section id="creature-hud">
-            <p>Name: <span id="creature-name"></span></p>
-            <p><img src="/assets/heart.png" alt="happiness" id="heart-pic">: <span id="creature-happy"></span></p>
-            <p><img src="/assets/money.png" alt="money" id="money-pic">: $<span id="creature-money"></span></p>
-        </section>
-        <section>
+    <section>
+    <!-- top row -->
+    <!-- top row -->
+    <div id="screen">
+        <div id="top-row">
+            <div id="moon-bird">
+                <img src="../assets/moon.png" alt="moon" id="moon">
+                <img src="../assets/bird.png" alt="moon" id="bird">
+            </div>
+            <div id="stars">
+            <img src="../assets/stars.png" alt="stars" id="stars">
+            </div>
+        </div>
+        
+        <!-- bottom row -->
+        <!-- bottom row -->
+        <div id="bottom-row">
+            
         <div id="creature-with-hat">
             <div id="hat">
                 <img src="" id="your-hat">
@@ -27,14 +44,26 @@
                 <img src="" id="creature-image" width="200px" alt="your creature">
             </div>
         </div>
-        </section>
+        
+        <div id="play-container" class="building-relative-play"> 
+             <a href="deal.html"><img src="../assets/play-off.png" id="play" class="middle-building">
+        </div>
+
+        <div id="store-container" class="building-relative-store"> 
+            <a href="store.html"><img src="../assets/store-off.png" id="store" class="middle-building"></a>
+        </div>
+
+        <div id="house-container" class="building-relative-house"> 
+            <a href="house.html"><img src="../assets/house-off.png" id="house" class="building">
+        </div>
+        <div id="party-container" class="building-relative-party"> 
+            <a href="party.html"><img src="../assets/party-off.png" id="party" class="building">
+        </div>
+    </div>
+    </div>
+    </section>
     </main>
-    <footer>
-        <a href="./deal.html">Play</a>
-        <a href="./store.html">Store</a>
-        <a href="./house.html">Your House</a>
-        <img id="party-image" class="hidden" src="../assets/fakehat2.png"></a>
-    </footer>
+    
 <script type="module" src="../src/map.js"></script>
 </body>
 </html>
