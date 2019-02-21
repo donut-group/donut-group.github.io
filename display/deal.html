@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Major+Mono+Display" rel="stylesheet">    <title>Card Game</title>
     <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../style/deal.css">
     <title>Deal</title>
 </head>
 <body> 
@@ -14,6 +16,9 @@
     </header>
 
     <main>
+        <div id="deal-screen">
+
+        <div id="paragraphs">
         <section>
             <p id="one">
                 Let's play a game! You'll get $10 each time you win. If I win, you'll lose $5 and one happiness point. 
@@ -24,11 +29,16 @@
             <p id="three" class="hidden">
                 After your turn, I'll play again. I will have to play a red card that's higher than your last played card, or a blue card that's lower. If I don't, then I lose. 
             </p>
+        </div>
+
         </section>
+        <div id="tutorial-buttons">
         <button id="button-one">Next</button>
         <button id="button-two" class="hidden">Next</button>
         <a href="./play.html" class="hidden" id="deal-link">Deal Me!</a>
         <a href="./play.html" id="skip-tutorial">Skip Tutorial</a>
+        </div>
+    </div>
     </main>
 <script type="module" src="../src/deal.js"></script>
 </body>

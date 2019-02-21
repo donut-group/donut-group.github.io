@@ -7,31 +7,40 @@
     <link rel="stylesheet" type="text/css" href="../style/play.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-    <title>Card Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Major+Mono+Display" rel="stylesheet">    <title>Card Game</title>
 </head>
 <body>
     <main>
-        <section id="creature-hud">
-            <p>Name: <span id="creature-name"></span></p>
-            <p><img src="/assets/heart.png" alt="happiness" id="heart-pic">: <span id="creature-happy"></span></p>
-            <p><img src="/assets/money.png" alt="money" id="money-pic">: $<span id="creature-money"></span></p>
-        </section>
+            <section id="creature-hud">
+                    <p>Name: <span id="creature-name"></span></p>
+                    <p>Happiness: <span id="creature-happy"></span></p>
+                    <p>Money: <span id="creature-money"></span></p>
+                    <a href="map.html" >Back to Map</a>
+
+                </section>
         <div id="screen">
         <section>
             <div id="shark-row">
-                <img src="../assets/shark.png" id="shark-image" alt="card shark"> 
-                <div id="sharkCardDisplay"> <p>Shark's Played Cards</p>
-                <span id="opponent-played-cards"></span>
+                
+                <div id="shark-image-container" class="shark-card-text">
+                <img src="../assets/shark.png" id="shark-image"> 
                 </div>
+
+                <div id="shark-card-display">
+                    <p>Shark's Played Cards</p>
+                    <span id="opponent-played-cards"></span>
+                </div>
+
             </div>
             <div id="center-row">
                 <span id="game-result"></span>
                 <div id="yourPlayedDisplay">
-                <section id="played-cards"></section>
-                <p>Played Cards</p>
+                    <section id="played-cards"></section>
+                    <p>Played Cards</p>
                 </div>
             </div>
             <div id="your-row">
+                <span id="deck-draw" class="card yellow">?</span>
                 <div id="yourHandDisplay">
                 <section id="your-hand"></section>
                 <p>Your Hand</p>
@@ -41,19 +50,12 @@
                     <img src="" id="creature-image" alt="your creature">
                 </div>
             </div>
-            <div id="buttons">
-            <span id="deck-draw">Draw From Deck</span>
-            
-            <button id="shark-turn" class="hidden">Let Shark Take a Turn</button>
-            <button id="redeal" class="hidden">Start a New Game</button>
-            </div>
+                    <div id="buttons">
+                    <button id="shark-turn" class="hidden">Let Shark Take a Turn</button>
+                    <button id="redeal" class="hidden">Start a New Game</button>
+                    </div>
         </div>
     </main>
-    <footer>
-        <div id="footer-link">
-        <a href="map.html" >Back to Map</a>
-        </div>
-    </footer>
     <script type="module" src="../src/play.js"></script>
 </body>
 </html>

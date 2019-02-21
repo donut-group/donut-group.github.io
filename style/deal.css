@@ -1,0 +1,67 @@
+html {
+    background: url(/assets/game-background.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#deal-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#paragraphs {
+    display:flex;
+    margin: 100vw;
+    margin: 20vh;
+}
+
+p{
+    position: relative;
+    bottom: 10vh
+}
+
+button{
+    position: relative;
+    bottom: 20vh;
+}
+a{
+    position: relative;
+    bottom: 20vh;
+}
+
+#skip-tutorial{
+    font-size: 2em;
+}
+
+#deal-link{
+    font-size: 2em;
+}
+
+#button-one{
+    font-size: 2em;
+}
+#button-two{
+    font-size: 2em;
+}
+
+#tutorial-buttons{
+    display: flex;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3em;
+}
+
+p {
+    font-size: 40px;
+
+}
