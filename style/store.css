@@ -1,0 +1,48 @@
+html {
+    background: url(/assets/store-background.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#creature-and-hat {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#hat {
+    margin-bottom: -40px;
+    z-index: 2;
+    position: relative;
+    width: 80%;
+    margin-right: auto;
+}
+
+#creature {
+    position: relative;
+}
+
+#creature-image {
+    z-index: 1;
+    position: relative;
+    bottom: 4vh;
+}
+
+#your-hat {
+    width: 10vw;
+    left: 5vw;
+    position: relative;
+}
+
+#hat-shelf {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.sale-hats {
+    width: 90px;
+} 
