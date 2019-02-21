@@ -1,3 +1,14 @@
+html {
+    background: url(/assets/background.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
 .card {
 
 }
@@ -9,3 +20,37 @@
 .red {
     background-color: pink;
 }
+
+/* #screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#creature-with-hat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#hat {
+    z-index: 2;
+    position: relative;
+    margin-bottom: -9.5vh;
+}
+
+#creature {
+    z-index: 1;
+    position: relative;
+    
+}
+
+#creature-image {
+    width: 25vh;
+}
+
+#your-hat {
+    width: 15vh;
+}
+

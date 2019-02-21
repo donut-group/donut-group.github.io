@@ -11,8 +11,8 @@
 </head>
 <body>
     <main>
+        <div id="screen">
         <section id="creature-hud">
-            <img src="" id="your-hat">
             <p>Name: <span id="creature-name"></span></p>
             <p>Happiness: <span id="creature-happy"></span></p>
             <p>Money: <span id="creature-money"></span></p>
@@ -35,9 +35,19 @@
             </div>
             <span id="game-result"></span>
         </section>            
-        <img src="" id="creature-image" width="200px">
+        <section>
+                <div id="creature-with-hat">
+                    <div id="hat">
+                        <img src="" id="your-hat">
+                    </div>
+                    <div id="creature">
+                        <img src="" id="creature-image">
+                    </div>
+                </div>
+                </section>
         <button id="shark-turn" class="hidden">Let Shark Take a Turn</button>
         <button id="redeal" class="hidden">Start a New Game</button>
+        </div>
     </main>
     <footer>
         <a href="map.html">Back to Map</a>
