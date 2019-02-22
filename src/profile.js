@@ -29,5 +29,9 @@ function creatureProfile() {
     creatureName.textContent = profile.name;
     creatureHappy.textContent = profile.happiness;
     creatureMoney.textContent = profile.money;
+
+    if(profile.happiness <= 0) {
+        window.location = '/display/death.html';
+    }
 }
 export default creatureProfile;
