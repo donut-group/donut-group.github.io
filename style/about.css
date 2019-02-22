@@ -10,23 +10,28 @@ html {
 
 
 #donut {
-    align: center;
-    display:block;
+    text-align: center;
+    display: block;
     margin: 0px auto;
+    margin-top: 15px;
 }
 
 .teammate {
     height: 20vh;
     vertical-align: top;
-    float:left;
-    clear:left;
+    float: left;
+    clear: left;
     padding-left: .5em;
     padding-right: .5em;
     padding-bottom: 1.5em;
 }
 
 p {
-    clear:left;
+    clear: left;
     font-size: 200%;
     font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    text-align: center;
 }

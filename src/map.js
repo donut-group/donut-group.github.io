@@ -3,6 +3,7 @@ import localLoad from './local-load.js';
 import localSave from './local-save.js';
 const partyImage = document.getElementById('party');
 const stars = document.getElementById('stars');
+const moon = document.getElementById('moon');
 
 creatureProfile();
 
@@ -15,9 +16,19 @@ if(profile.hat === 3) {
 stars.addEventListener('click', function() {
     if(!profile.starClicked) {
         profile.happiness += 2;
+        profile.money += 100;
         profile.starClicked = true;
     }
     stars.classList.add('shooting-star');
+    localSave('profile', profile);
+    creatureProfile();
+});
+
+moon.addEventListener('click', function() {
+    if(!profile.moonClicked) {
+        profile.money = 5;
+        profile.moonClicked = true;
+    }
     localSave('profile', profile);
     creatureProfile();
 });
