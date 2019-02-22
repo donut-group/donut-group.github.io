@@ -106,7 +106,10 @@ html {
     position: absolute;
     bottom: 30vh;
     left: 40vw;
+}
 
+.unclickable-building {
+    pointer-events: none;
 }
 
 
