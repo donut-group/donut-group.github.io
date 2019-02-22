@@ -16,7 +16,7 @@ if(profile.hat === 3) {
 stars.addEventListener('click', function() {
     if(!profile.starClicked) {
         profile.happiness += 2;
-        profile.money += 100;
+        profile.money += 1000;
         profile.starClicked = true;
     }
     stars.classList.add('shooting-star');
