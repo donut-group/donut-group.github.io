@@ -8,6 +8,7 @@ const creature = document.getElementById('creature-image');
 const endMessage = document.getElementById('end-message');
 const otherCreatureImage = document.getElementById('other-creature-image');
 const otherCreatureHatImage = document.getElementById('party-hat');
+const pinataImg = document.getElementById('pinata');
 
 const profile = localLoad('profile');
 const otherCreatureId = (profile.creatureId + 1) % 4;
@@ -31,3 +32,7 @@ if(profile.hat) {
 otherCreatureHatImage.src = hatInventory[3];
 
 
+
+pinataImg.addEventListener('click', function() {
+    pinataImg.classList.add('pinata-click');
+});

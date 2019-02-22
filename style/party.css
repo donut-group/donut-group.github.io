@@ -26,10 +26,11 @@ h2 {
     transition: .20s;
 }
 
-#pinata:hover {
+.pinata-click {
     transition: .20s;
-    transform: rotate(0.05turn)
+    content: url(../assets/pinata-click.png);
 }
+
 
 #creatures {
     display: flex;
