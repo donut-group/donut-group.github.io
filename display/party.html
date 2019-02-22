@@ -9,13 +9,28 @@
     <link rel="stylesheet" type="text/css" href="../style/party.css">
     <title>Party!</title>
 </head>
-<body>
+<body scroll="no" style="overflow: hidden">
     <header>
         <h1>The Party!</h1>
+        <h2 id="end-message"></h2>
     </header>
     <main>
-        <img src="" id="creature-image" alt="your creature">
-        <img src="" id="your-hat">
+        <div id="creature-with-hat">
+            <div id="hat">
+                <img src="" id="your-hat">
+            </div>
+            <div id="creature">
+                <img src="" id="creature-image" width="200px" alt="your creature">
+            </div>
+        </div>
+        <div id="other-creature-div">
+            <div id="party-hat">
+                <img src="" id="other-creature-hat">
+            </div>
+            <div id="other-creature">
+                <img src="" id="other-creature-image" width="200px" alt="your creature's friend">
+            </div>
+        </div>
     </main>
     <footer></footer>
     <script type="module" src="../src/party.js"></script>

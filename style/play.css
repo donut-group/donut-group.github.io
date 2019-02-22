@@ -70,7 +70,8 @@ p {
     text-align: center;
 }
 
-#game-result {
+
+#game-result{
     width: 30vw;
     height: 10vh;
     font-family: 'Fredericka the Great', cursive;

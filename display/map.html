@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 </head>
-<body>
+<body scroll="no" style="overflow: hidden">
     <header><h1 class="hidden">DreamWorld Map</h1></header>
     <section id="creature-hud">
         <p>Name: <span id="creature-name"></span></p>
@@ -25,7 +25,7 @@
         <div id="top-row">
             <div id="moon-bird">
                 <img src="../assets/moon.png" alt="moon" id="moon">
-                <img src="../assets/bird.png" alt="moon" id="bird">
+                <a href="about.html"><img src="../assets/bird.png" alt="bird" id="bird"></a>
             </div>
             <div id="stars">
             <img src="../assets/stars.png" alt="stars" id="stars">
@@ -57,7 +57,7 @@
             <a href="house.html"><img src="../assets/house-off.png" id="house" class="building">
         </div>
         <div id="party-container" class="building-relative-party"> 
-            <a href="party.html"><img src="../assets/party-off.png" id="party" class="building">
+            <a href="party.html"><img src="../assets/party-off.png" id="party" class="building unclickable-building">
         </div>
     </div>
     </div>

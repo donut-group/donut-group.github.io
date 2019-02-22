@@ -1,0 +1,32 @@
+html {
+    background-image: linear-gradient(to bottom right, white, rgb(240, 162, 236));
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+#donut {
+    align: center;
+    display:block;
+    margin: 0px auto;
+}
+
+.teammate {
+    height: 20vh;
+    vertical-align: top;
+    float:left;
+    clear:left;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: 1.5em;
+}
+
+p {
+    clear:left;
+    font-size: 200%;
+    font-family: 'Montserrat', sans-serif;
+}
