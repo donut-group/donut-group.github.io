@@ -11,10 +11,13 @@
 </head>
 <body scroll="no" style="overflow: hidden">
     <header>
-        <h1>The Party!</h1>
         <h2 id="end-message"></h2>
     </header>
+    <div id="pinata-container">
+        <img src="../assets/pinata.png" id="pinata" alt="pinata">
+    </div>
     <main>
+    <div id="creatures">
         <div id="creature-with-hat">
             <div id="hat">
                 <img src="" id="your-hat">
@@ -24,13 +27,15 @@
             </div>
         </div>
         <div id="other-creature-div">
-            <div id="party-hat">
-                <img src="" id="other-creature-hat">
-            </div>
+            
             <div id="other-creature">
                 <img src="" id="other-creature-image" width="200px" alt="your creature's friend">
             </div>
+            <div id="party-hat">
+                    <img src="" id="other-creature-hat">
+                </div>
         </div>
+    </div>
     </main>
     <footer></footer>
     <script type="module" src="../src/party.js"></script>
