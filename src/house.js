@@ -6,8 +6,6 @@ import localSave from './local-save.js';
 creatureProfile();
 
 const yourHats = localLoad('yourHats');
-
-
 const hatRack = document.getElementById('hat-rack');
 const profile = localLoad('profile');
 
@@ -36,11 +34,8 @@ function createHatRack() {
                     hatClick(i);
                 });
         }
-        hatRack.appendChild(hatSpan);
-                
-        
+        hatRack.appendChild(hatSpan);     
     }
 }
-
 
 createHatRack();

@@ -8,7 +8,8 @@ html {
     background-attachment: fixed;
 }
 
-p {
+
+.game {
     color:#f2f3f4;
     font-size: 1.5em;
 }
@@ -71,7 +72,7 @@ p {
 }
 
 
-#game-result{
+#game-result {
     width: 30vw;
     height: 10vh;
     font-family: 'Fredericka the Great', cursive;
@@ -80,7 +81,7 @@ p {
     color: #f2f3f4;
 }
 
-#your-row{
+#your-row {
     font-family: 'Fredericka the Great', cursive;
     display: flex;
     flex-direction: row;
@@ -164,6 +165,6 @@ p {
     justify-content: center;
 }
 
-button{
+button {
     font-size: 1.5em;
 }

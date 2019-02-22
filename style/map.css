@@ -8,39 +8,39 @@ html {
     background-attachment: fixed;
 }
 
-#screen{
+#screen {
     display: flex;
     flex-direction: column;
 }
 
-#top-row{
+#top-row {
     display: flex;
     flex-direction: row;
     height: 50vh;
 }
 
-#moon{
+#moon {
     width: 13.5vw;
     position: relative;
     top: 3vh;
     left: 4vw;
 }
 
-#bird{
+#bird {
     width: 10vw;
     position: relative;
     top: 15vh;
     left: 6vw;
 }
 
-#stars{
+#stars {
     width: 23vw;
     position: relative;
     top: 8vh;
     left: 24vw;
 }
 
-#bottom-row{
+#bottom-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -51,7 +51,7 @@ html {
     position: relative;
     top: 20vh;
 }
-.building-relative-play{
+.building-relative-play {
     position: relative;
     top: 20vh;
 }
@@ -68,24 +68,24 @@ html {
     top: 20vh;
 }
 
-.middle-building{
+.middle-building {
     width: 15vw;
 }
 
-.building{
+.building {
     width: 15vw;
 }
 
-#play:hover{
+#play:hover {
     content: url('../assets/play-on.png');
 }
-#store:hover{
+#store:hover {
     content: url('../assets/store-on.png');
 }
-#house:hover{
+#house:hover {
     content: url('../assets/house-on.png');
 }
-#party:hover{
+#party:hover {
     content: url('../assets/party-on.png');
 }
 

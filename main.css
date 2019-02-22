@@ -52,10 +52,10 @@ button {
 }
 
 #creature-hud {
-    background-color: rgba(248, 217, 41, 0.973);
+    background-color: rgb(110, 112, 187);
     height: 33px;
     text-align: center;
-    font-family: 'Allerta', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
