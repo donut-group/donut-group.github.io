@@ -8,6 +8,11 @@ html {
     background-attachment: fixed;
 }
 
+p {
+    color:#f2f3f4;
+    font-size: 1.5em;
+}
+
 #screen {
     margin-right: 7vw;
     margin-left: 7vw;
@@ -39,10 +44,9 @@ html {
     display:flex;
     flex-direction: right;
     justify-content: space-around;
-
 }
 
-#shark-card-display{
+#shark-card-display {
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -51,7 +55,7 @@ html {
 }
 
 
-#shark-image{
+#shark-image {
     width: 20vw;
     height: 15vw;
     margin-top: 5vh;
@@ -66,17 +70,13 @@ html {
     text-align: center;
 }
 
-#game-result{
-    margin-top: 
-
-}
-
-#game-result{
+#game-result {
     width: 30vw;
     height: 10vh;
     font-family: 'Fredericka the Great', cursive;
     font-size: 30px;
     margin-bottom: 100px;
+    color: #f2f3f4;
 }
 
 #your-row{
@@ -91,11 +91,9 @@ html {
     margin-left: 15vw;
     width: 10vw;
     height: 13vw;
-    margin-bottom:
-    
 }
 
-#yourPlayedDisplay{
+#yourPlayedDisplay {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,17 +101,17 @@ html {
     width: 17vw;
     margin-top: -5vh;
 }
-#yourPlayedDisplay span{
+
+#yourPlayedDisplay span {
     margin-right: 500px
 }
 
-#yourPlayedDisplay p{
+#yourPlayedDisplay p {
     position: absolute;
     margin-top: 60px;
 }
 
-
-#yourHandDisplay{
+#yourHandDisplay {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,7 +121,7 @@ html {
     margin-left: 8vw;
 }
 
-#deck-draw{
+#deck-draw {
     width: 33vw;
     text-align: center;
     font-family: 'Fredericka the Great', cursive;
@@ -139,14 +137,13 @@ html {
     margin-right:25vw;
 }
 
-#your-hat{
+#your-hat {
     z-index: 2;
     margin-bottom: -9.5vh;
     height: 20vh;
 }
 
 #creature-image {
-
     z-index: 1;
     height: 20vh;
 }
@@ -157,16 +154,8 @@ html {
     justify-content: center;
 }
 
-#footer-link{
+#footer-link {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-/* #creature-image {
-    width: 25vh;
-}
-
-#your-hat {
-    width: 15vh;
-} */
-

@@ -3,6 +3,24 @@ body {
     margin: 0px;
 }
 
+a:link {
+    color: #0fa3b1;
+
+}
+
+a:visited {
+    color: #097983;
+}
+
+a:hover {
+    color: #08d5e9;
+
+}
+
+a:active {
+    color: #0fa3b1;
+}
+
 .hidden {
     display: none;
 }
@@ -21,6 +39,10 @@ h1 {
 }
 
 button {
+    background-color: #0fa3b1;
+    border-radius: 3px;
+    color: white;
+    border: 0px solid transparent
 
 }
 
