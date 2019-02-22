@@ -34,17 +34,28 @@ html {
 }
 
 #bird {
-    width: 4.5vw;
+    width: 10vw;
     position: relative;
     top: 15vh;
     left: 6vw;
 }
 
+#bird:hover {
+    content: url(../assets/bird-on.png);
+ }
+
 #stars {
+    transition: .50s;
     width: 23vw;
     position: relative;
     top: 8vh;
     left: 24vw;
+}
+
+.shooting-star {
+    transition: .50s;
+    transform: translate(10em, -20em);
+
 }
 
 #bottom-row {

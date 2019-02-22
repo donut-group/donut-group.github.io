@@ -17,6 +17,7 @@ stars.addEventListener('click', function() {
         profile.happiness += 2;
         profile.starClicked = true;
     }
+    stars.classList.add('shooting-star');
     localSave('profile', profile);
     creatureProfile();
 });
