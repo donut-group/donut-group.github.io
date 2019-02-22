@@ -40,6 +40,6 @@ otherCreatureHatImage.src = hatInventory[3];
 
 
 
-pinataImg.addEventListener('click', function () {
+pinataImg.addEventListener('click', function() {
     pinataImg.classList.add('pinata-click');
 });
