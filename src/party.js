@@ -38,10 +38,8 @@ if(profile.hat) {
 
 otherCreatureHatImage.src = hatInventory[3];
 
-function pinataSwap() {
-    const pinata1 = '../assets/pinata.png';
-    const pinata2 = '../assets/pinata-click.png';
-    pinataImg.src = (pinataImg.src === pinata1) ? pinata2 : pinata1;
-}
 
-pinataImg.addEventListener('click', pinataSwap);
+
+pinataImg.addEventListener('click', function () {
+    pinataImg.classList.add('pinata-click');
+});
