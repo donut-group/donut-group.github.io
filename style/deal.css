@@ -6,6 +6,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #deal-screen {
@@ -17,40 +18,43 @@ html {
 
 #paragraphs {
     display:flex;
-    margin: 100vw;
-    margin: 20vh;
+    margin: 75vw;
+    margin: 10vh;
+    width: 50vw;
 }
 
-p{
+p {
     position: relative;
-    bottom: 10vh
+    bottom: 10vh;
+    font-size: 1.5em;
+    color: #f2f3f4;
+
 }
 
-button{
+button {
+    position: relative;
+    bottom: 20vh;
+    margin-bottom: 3vh;
+}
+
+a {
     position: relative;
     bottom: 20vh;
 }
-a{
-    position: relative;
-    bottom: 20vh;
+
+#skip-tutorial {
+    font-size: 1.5em;
 }
 
-#skip-tutorial{
-    font-size: 2em;
+#deal-link {
+    font-size: 1.5em;
 }
 
-#deal-link{
-    font-size: 2em;
+#button-one, #button-two, #button-three  {
+    font-size: 1.5em;
 }
 
-#button-one{
-    font-size: 2em;
-}
-#button-two{
-    font-size: 2em;
-}
-
-#tutorial-buttons{
+#tutorial-buttons {
     display: flex;
 
 }
@@ -61,7 +65,18 @@ h1 {
     font-size: 3em;
 }
 
-p {
-    font-size: 40px;
 
+#red-card {
+    color: #dd4b4b;
+
+}
+
+#blue-card {
+    color: #4280f4;
+
+}
+
+#tutorial-buttons {
+    text-align: center;
+    display: block;
 }

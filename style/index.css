@@ -46,6 +46,7 @@ body {
       background-image: url(../assets/button.png);
       background-repeat: no-repeat;
       background-position: 50% 50%;
+      background-color: transparent;
       border: none;
       width: 176px;
       height: 52px;
