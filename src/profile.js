@@ -33,5 +33,9 @@ function creatureProfile() {
     if(profile.happiness <= 0) {
         window.location = '/display/death.html';
     }
+    if(profile.money < 0) {
+        window.location = '/display/debt.html';
+    }
+
 }
 export default creatureProfile;

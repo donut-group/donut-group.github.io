@@ -34,3 +34,18 @@ h1{
 #column-three {
     height: 100vh;
 }
+
+#creature-image{
+    position:relative;
+    right: 8vw;
+    bottom: 1vh;
+    width: 20vw;
+}
+
+#wound {
+    position: relative;
+    left:2vw;
+    bottom: 13vh;
+    width: 9vw;
+    z-index: 2;
+}
