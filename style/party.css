@@ -13,11 +13,46 @@ h1 {
     
 }
 
-#creature-image {
-    background-color:white;
+h2{
+    text-align: center;
+    margin-top: 40px;
 }
 
-#your-hat{
-    background-color: white;
+#pinata{
+    width: 23vw;
+    position: relative;
+    bottom: 11.2vh;
+    left: 4vw;
+}
+
+#creatures {
+    display:flex;
+    justify-content: space-around;
+}
+
+#creature-with-hat {
+    width: 33vw;
+}
+
+#your-hat {
+    z-index: 2;
+    position: absolute;
+    top: 50vh;
+    left: 21vw;
+    height: 13vh;
+}
+
+#creature-image {
+    position:absolute;
+    z-index: 1;
+    top: 56vh;
+    left: 18vw;
+}
+
+
+#other-creature-div{
+    position: absolute;
+    top: 50vh;
+    left: 70vw;
 }
 

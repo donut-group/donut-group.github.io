@@ -29,7 +29,7 @@ let hatInventory = [
         src: '../assets/hat-party.png',
         cost: 60,
         happiness: 2,
-        description: 'A party hat! Just what you need to go to the party with all of your friends. (You can only go to the party if you are wearing this hat.)',
+        description: 'A party hat! Just what you need to go to the party.',
         alt: 'party hat'
 
     },
