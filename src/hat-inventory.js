@@ -13,7 +13,7 @@ let hatInventory = [
         src: '../assets/hat-bunny-ears.png',
         cost: 40,
         happiness: 2,
-        description: 'The bunny ears make you giggle just thinking about wearing them.',
+        description: 'The bunny ears make you giggle when you think about wearing them.',
         alt: 'bunny ears hat'
     },
     {   
@@ -38,7 +38,7 @@ let hatInventory = [
         src: '../assets/hat-bowler.png',
         cost: 100,
         happiness: 2,
-        description: 'A magnificent bowler, much favored by society\'s elite.',
+        description: 'A magnificent bowler hat, much favored by society\'s elite.',
         alt: 'bowler hat'
     }
 ];

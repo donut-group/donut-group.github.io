@@ -20,14 +20,15 @@ html {
     display:flex;
     margin: 75vw;
     margin: 10vh;
-    width: 50vw;
+    width: 40vw;
 }
 
 p {
     position: relative;
     bottom: 10vh;
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: #f2f3f4;
+    line-height: 1.5em;
 
 }
 
@@ -43,11 +44,11 @@ a {
 }
 
 #skip-tutorial {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 #deal-link {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 #button-one, #button-two, #button-three  {
