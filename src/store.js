@@ -29,7 +29,7 @@ function hatEntered(index) {
     const yourHats = localLoad('yourHats');
     if(!yourHats || !yourHats.includes(index)) {
         message.innerHTML = hatInventory[index].description + 
-        '<br> Cost: ' + hatInventory[index].cost;
+        '<br> Cost: $' + hatInventory[index].cost;
     }
 }
 

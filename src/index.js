@@ -2,6 +2,7 @@ import creatureList from './creatures.js';
 import localSave from './local-save.js';
 const form = document.getElementById('name-form');
 const dream = document.getElementById('dream');
+//const button = document.getElementById('submit');
 
 window.localStorage.clear();
 
