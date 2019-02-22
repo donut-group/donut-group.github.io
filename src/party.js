@@ -8,6 +8,7 @@ const creature = document.getElementById('creature-image');
 const endMessage = document.getElementById('end-message');
 const otherCreatureImage = document.getElementById('other-creature-image');
 const otherCreatureHatImage = document.getElementById('party-hat');
+const pinataImg = document.getElementById('pinata');
 
 let otherCreatureId = null;
 
@@ -37,4 +38,10 @@ if(profile.hat) {
 
 otherCreatureHatImage.src = hatInventory[3];
 
+function pinataSwap() {
+    const pinata1 = '../assets/pinata.png';
+    const pinata2 = '../assets/pinata-click.png';
+    pinataImg.src = (pinataImg.src === pinata1) ? pinata2 : pinata1;
+}
 
+pinataImg.addEventListener('click', pinataSwap);
