@@ -9,8 +9,17 @@ const endMessage = document.getElementById('end-message');
 const otherCreatureImage = document.getElementById('other-creature-image');
 const otherCreatureHatImage = document.getElementById('party-hat');
 
+let otherCreatureId = null;
+
 const profile = localLoad('profile');
-const otherCreatureId = profile.creatureId + 1 % 4;
+if(profile.creatureId === 3) {
+    otherCreatureId = profile.creatureId - 1;
+}
+else {
+    otherCreatureId = profile.creatureId + 1;
+}
+
+console.log(otherCreatureId);
 
 if(profile.happiness > 4) {
     creature.src = creatureList[profile.creatureId].happyImage;
