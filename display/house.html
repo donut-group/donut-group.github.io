@@ -5,30 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../style/house.css">
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
     <title>Your House</title>
 </head>
-<body>
-    <head>
-        <h1>Your House</h1>
-    </head>
-    <main>
+<body scroll="no" style="overflow: hidden">
+        <section id="creature-hud">
+            <p>Name: <span id="creature-name"></span></p>
+            <p><img src="/assets/heart.png" alt="happiness" id="heart-pic">: <span id="creature-happy"></span></p>
+            <p><img src="/assets/money.png" alt="money" id="money-pic">: $<span id="creature-money"></span></p>
+            <a href="map.html" >Back to Map</a>
+
+        </section>
         <main>
-            <section id="creature-hud">
-                <p>Name: <span id="creature-name"></span></p>
-                <p><img src="/assets/heart.png" alt="happiness" id="heart-pic">: <span id="creature-happy"></span></p>
-                <p><img src="/assets/money.png" alt="money" id="money-pic">: $<span id="creature-money"></span></p>
-            </section>
+    <div id="screen">
+
+        <div id="row-one">
+        </div>
+
+        <div id="row-two">
         <section id="hat-rack">
         </section>
         <section>
-        <img src="" id="creature-image" width="200px" alt="your dream friend">
-        <img src="" id="your-hat" alt="your dream friend's hat">
-        </section>
+        <div id="creature">
+                <section>
+                <div id="creature-with-hat">
+                    <div id="hat">
+                        <img src="" id="your-hat">
+                    </div>
+                     <div id="creature">
+                         <img src="" id="creature-image" width="200px" alt="your creature">
+                    </div>
+                </div>
+                </div>
+        </div>
+    
+    </div>    
     </main>
-    <footer>
-        <a href="map.html">Back to the map</a>
-    </footer>
     <script type="module" src="../src/house.js"></script>
 </body>
 </html>
