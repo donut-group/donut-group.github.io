@@ -10,7 +10,7 @@ const otherCreatureImage = document.getElementById('other-creature-image');
 const otherCreatureHatImage = document.getElementById('party-hat');
 
 const profile = localLoad('profile');
-const otherCreatureId = profile.creatureId + 1 % 4;
+const otherCreatureId = (profile.creatureId + 1) % 4;
 
 if(profile.happiness > 4) {
     creature.src = creatureList[profile.creatureId].happyImage;

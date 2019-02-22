@@ -117,7 +117,10 @@ sharkTurnButton.addEventListener('click', function(){
     theirPlayedCardsDisplay.appendChild(theirPlayedCardSpan);
     yourHandDisplay.classList.remove('unclickable');
     deckDraw.classList.remove('unclickable');
-    if(cardWin(lastPlayedCard, theirCard)){
+    if(cardWin(theirCard, lastPlayedCard)) {
+        gameResultDisplay.textContent = 'The shark stays in another round.';
+    }
+    else {
         gameResultDisplay.textContent = 'The shark has lost to you';
         
         profile.money += 10;
@@ -126,8 +129,6 @@ sharkTurnButton.addEventListener('click', function(){
         creatureProfile();
         yourHandDisplay.classList.add('unclickable');
         deckDraw.classList.add('unclickable');
-    } else {
-        gameResultDisplay.textContent = 'The shark stays in another round.';
     }
 });
 
