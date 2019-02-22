@@ -15,7 +15,7 @@ if(profile.hat === 3) {
 
 stars.addEventListener('click', function() {
     if(!profile.starClicked) {
-        profile.happiness += 2;
+        //happiness gain should go here
         profile.money += 1000;
         profile.starClicked = true;
     }
