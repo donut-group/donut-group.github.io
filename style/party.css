@@ -12,10 +12,14 @@ h1 {
     text-align: center;
     
 }
-
-h2 {
+#end-message{
+    position: relative;
     text-align: center;
     margin-top: 40px;
+    font-size: 1.5em;
+    color: black;
+    background-color: rgb(221, 180, 108);
+    z-index: 2;
 }
 
 #pinata {
@@ -24,6 +28,7 @@ h2 {
     bottom: 11.2vh;
     left: 4vw;
     transition: .20s;
+    z-index: 0;
 }
 
 .pinata-click {
@@ -69,6 +74,9 @@ h2 {
 
 #link {
     position: absolute;
+    left: 40vw;
     bottom: 5vh;
 }
+
+
 

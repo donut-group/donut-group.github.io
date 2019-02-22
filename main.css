@@ -4,13 +4,14 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-a:link {
-    color: #0fa3b1;
+a {
+    color: #c6ecf0;
+    text-decoration: none;
 
 }
 
 a:visited {
-    color: #097983;
+    color: #c6ecf0;;
 }
 
 a:hover {
