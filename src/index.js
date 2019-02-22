@@ -5,7 +5,6 @@ const dream = document.getElementById('dream');
 
 window.localStorage.clear();
 
-
 let randomCreature = Math.floor(Math.random() * creatureList.length);
 
 form.addEventListener('submit', function(event) {
@@ -23,11 +22,9 @@ form.addEventListener('submit', function(event) {
     
     localSave('profile', profile);
 
-    
     dream.src = '../assets/dream-cloud-burst.gif';
 
     setTimeout(function(){ window.location = '/display/map.html'; }, 4150);
 
-    //possible stretch location
 });
    

@@ -6,7 +6,6 @@ import creatureProfile from '../src/profile.js';
 
 creatureProfile();
 
-
 const profile = localLoad('profile');
 
 const yourHandDisplay = document.getElementById('your-hand');
@@ -95,8 +94,6 @@ function redeal() {
     deckDraw.classList.remove('unclickable');
 }
 
-
-
 function createCard(yourCard, container) {
     const yourCardDisplay = document.createElement('span');
     yourCardDisplay.textContent = yourCard.number;
@@ -105,7 +102,6 @@ function createCard(yourCard, container) {
     container.appendChild(yourCardDisplay);
     return yourCardDisplay;
 }
-
 
 sharkTurnButton.addEventListener('click', function(){   
     sharkTurnButton.classList.add('hidden');

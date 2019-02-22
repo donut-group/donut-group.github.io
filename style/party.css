@@ -13,12 +13,12 @@ h1 {
     
 }
 
-h2{
+h2 {
     text-align: center;
     margin-top: 40px;
 }
 
-#pinata{
+#pinata {
     width: 23vw;
     position: relative;
     bottom: 11.2vh;
@@ -56,7 +56,7 @@ h2{
 }
 
 
-#other-creature-div{
+#other-creature-div {
     position: absolute;
     top: 50vh;
     left: 70vw;

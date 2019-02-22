@@ -30,7 +30,6 @@ html {
 #moon:hover {
     transition: .10s;
     transform: rotate(20deg);
-
 }
 
 #bird {
@@ -69,7 +68,7 @@ html {
     position: relative;
     top: 20vh;
 }
-.building-relative-play{
+.building-relative-play {
     position: relative;
     top: 20vh;
 }

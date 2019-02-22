@@ -8,7 +8,7 @@ html {
     background-attachment: fixed;
 }
 
-#screen{
+#screen {
     display: flex;
     flex-direction: column;
     
@@ -63,7 +63,7 @@ html {
     left: 2.5vw;
 }
 
-#creature-with-hat{
+#creature-with-hat { 
     position: absolute;
     bottom: 4vh;
     right: 20vh;

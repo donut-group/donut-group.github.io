@@ -11,14 +11,12 @@
 </head>
 <body scroll="no" overflow="hidden">
     <main>
-            <section id="creature-hud">
-                    <p>Name: <span id="creature-name"></span></p>
-                    <p>Happiness: <span id="creature-happy"></span></p>
-                    <p>Money: <span id="creature-money"></span></p>
-                    <a href="deal.html" >Read the Rules</a>
-                    <a href="map.html" >Back to Map</a>
-
-                </section>
+        <section id="creature-hud">
+            <p>Name: <span id="creature-name"></span></p>
+            <p><img src="/assets/heart.png" alt="happiness" id="heart-pic">: <span id="creature-happy"></span></p>
+            <p><img src="/assets/money.png" alt="money" id="money-pic">: $<span id="creature-money"></span></p>
+            <a href="map.html" >Back to Map</a>
+        </section>
         <div id="screen">
         <section>
             <div id="shark-row">
@@ -28,7 +26,7 @@
                 </div>
 
                 <div id="shark-card-display">
-                    <p>Shark's Played Cards</p>
+                    <p class="game">Shark's Played Cards</p>
                     <span id="opponent-played-cards"></span>
                 </div>
 
@@ -37,14 +35,14 @@
                 <span id="game-result"></span>
                 <div id="yourPlayedDisplay">
                     <section id="played-cards"></section>
-                    <p>Your Played Cards</p>
+                    <p class="game">Your Played Cards</p>
                 </div>
             </div>
             <div id="your-row">
                 <span id="deck-draw" class="card yellow">?</span>
                 <div id="yourHandDisplay">
                 <section id="your-hand"></section>
-                <p>Your Hand</p>
+                <p class="game">Your Hand</p>
                 </div>
                 <div id="creature-with-hat">
                     <img src="" id="your-hat">

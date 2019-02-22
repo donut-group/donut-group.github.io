@@ -8,7 +8,6 @@ function shuffle(array) {
         array [counter] = array[index];
         array[index] = temp;
     }
-    console.log(array);
     return array;
 }
 
