@@ -19,8 +19,6 @@ else {
     otherCreatureId = profile.creatureId + 1;
 }
 
-console.log(otherCreatureId);
-
 if(profile.happiness > 4) {
     creature.src = creatureList[profile.creatureId].happyImage;
     endMessage.textContent = 'Congratulations, you made it to the party! You are so happy!';

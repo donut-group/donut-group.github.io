@@ -10,7 +10,6 @@ import creatureProfile from './profile.js';
 const yourHatDisplay = document.getElementById('your-hat');
 const creature = document.getElementById('creature-image');
 
-
 const profile = localLoad('profile');
 creatureProfile();
 
@@ -34,9 +33,7 @@ function hatEntered(index) {
     }
 }
 
-
 function hatClicked(index, targetSpan) {
-    // check money
     if(hatInventory[index].cost > profile.money) {
         message.textContent = 'You don\'t have enough money to buy this hat. Go back to the game to win more money.';
     }
@@ -49,8 +46,6 @@ function hatClicked(index, targetSpan) {
         yourHatDisplay.src = hatInventory[profile.hat].src;
         targetSpan.classList.add('invisible');
 
-        //need to make hats disappear from the store - use same array for bought hats and your hats
-
         let yourHats = localLoad('yourHats');
         if(!yourHats){
             yourHats = [];
@@ -59,10 +54,6 @@ function hatClicked(index, targetSpan) {
         localSave('yourHats', yourHats);
         creatureProfile();
     }
-
-    // remove hat from store
-    // set hat in profile
-    //happiness increase
 }
 let yourHats = localLoad('yourHats');
 if(!yourHats){
