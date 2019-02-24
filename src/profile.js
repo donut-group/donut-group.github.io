@@ -17,6 +17,9 @@ function creatureProfile() {
         creatureHat.src = hatInventory[profile.hat].src;
         creatureHat.alt = hatInventory[profile.hat].alt;
     }
+    // Some code duplication below and branching logic that is a good opportunity
+    // for test-driving your code
+
     if(profile.happiness > 4) {
         creatureImage.src = creatureList[profile.creatureId].happyImage;
         creatureImage.alt = 'your happy creature';
@@ -30,6 +33,7 @@ function creatureProfile() {
     creatureHappy.textContent = profile.happiness;
     creatureMoney.textContent = profile.money;
 
+    // some more low hanging fruit for wrapping this in a function and TDD
     if(profile.happiness <= 0) {
         window.location = '/display/death.html';
     }

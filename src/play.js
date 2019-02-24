@@ -61,7 +61,8 @@ function redeal() {
     }
     redealButton.classList.add('hidden');
     gameResultDisplay.textContent = null;
-
+    
+    // wrap in a function and drive with tests
     for(let i = 1; i < 7; i++) {
         const redCard = {
             number: i,
