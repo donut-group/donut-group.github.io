@@ -12,6 +12,13 @@ const pinataImg = document.getElementById('pinata');
 
 const profile = localLoad('profile');
 const otherCreatureId = (profile.creatureId + 1) % 4;
+// I'm seeing this concept of if(profile.happiness > 4) at least 3 times in your
+// application. This seems to be a domain concept that you want to store in one
+// place, so it will be easy to change. There are a couple ways of doing this.
+// One would be to have a happinessLevel function that you call from a 
+// happiness-level.js, along with "4" being stored somewhere central as
+// "partyMoodLevel", making the check if(happinessLevel() > partyMoodLevel).
+// There are lots of different ways to do this that's just one idea.
 
 if(profile.happiness > 4) {
     creature.src = creatureList[profile.creatureId].happyImage;
